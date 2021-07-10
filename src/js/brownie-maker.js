@@ -2,7 +2,7 @@ class BrownieMaker {
 
     constructor() {
         this.clickCount = 0;
-        this.AutoClickerCount = 0;
+        this.autoClickerCount = 0;
     }
 
     recordClick(){

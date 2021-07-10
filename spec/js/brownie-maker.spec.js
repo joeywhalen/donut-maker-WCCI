@@ -27,27 +27,32 @@ describe('FEATURE: Be able to purchase the first Auto Clicker with 100 brownies 
 
         beforeEach(() => {
             underTest = new BrownieMaker();
-            underTest.clickCount = 150;
+            underTest.clickCount = 450;
+            underTest.autoClickerCount = 0;
         });
 
-        it('Should start with a click count of 150.', () => {
-            expect(underTest.clickCount).toBe(150);
+        it('Should start with a click count of 450.', () => {
+            expect(underTest.clickCount).toBe(450);
+            expect(underTest.autoClickerCount).toBe(0);
         });
 
         it('Can retrieve a brownie Auto Clicker count.', () => {
-            underTest.recordAutoClick();
-            expect(underTest.clickCount).toBe(151);
+            underTest.purchaseAutoClicker();
+            expect(underTest.autoClickerCount).toBe(1);
         });
 
-        it('Can retrieve a brownie Auto Clicker count if 2 Auto Clicks recorded.', () => {
-            underTest.recordAutoClick();
-            underTest.recordAutoClick();
-            expect(underTest.clickCount).toBe(152);
+        it('Can retrieve a brownie Auto Clicker count if 2 Auto Clickers are purchased.', () => {
+            underTest.purchaseAutoClicker();
+            underTest.purchaseAutoClicker();
+            expect(underTest.autoClickerCount).toBe(2);
         });
 
         it('Can subtract the Auto Clicker cost from the brownie count.', () => {
             underTest.purchaseAutoClicker();
-            expect(underTest.clickCount).toBe(50);
+            underTest.purchaseAutoClicker();
+            underTest.purchaseAutoClicker();
+            expect(underTest.clickCount).toBe(150);
+            expect(underTest.autoClickerCount).toBe(3);
         });
     });
 });
