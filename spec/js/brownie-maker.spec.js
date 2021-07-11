@@ -31,7 +31,7 @@ describe('FEATURE: Be able to purchase the first Auto Clicker with 100 brownies 
             underTest.autoClickerCount = 0;
         });
 
-        it('Should start with a click count of 450.', () => {
+        it('Should start with a click count of 450, and Auto Clicker count of 0.', () => {
             expect(underTest.clickCount).toBe(450);
             expect(underTest.autoClickerCount).toBe(0);
         });
@@ -158,10 +158,21 @@ describe('FEATURE: Be able to purchase the first brownie multiplier with 10 clic
             underTest.clickCount = 50;
         });
 
-        it('Should start with a click count of 50.', () => {
+        it('Should start with a click count of 50, and a Brownie Multiplier count of 0.', () => {
             expect(underTest.clickCount).toBe(50);
+            expect(underTest.brownieMultiplierCount).toBe(0);
         });
 
+        it('Can retrieve a Brownie Multiplier count if a Brownie Multiplier is purchased.', () => {
+            underTest.purchaseBrownieMultiplier();
+            expect(underTest.brownieMultiplierCount).toBe(1);
+        });
+
+        it('Can retrieve a Brownie Multiplier count if 2 Brownie Multipliers are purchased.', () => {
+            underTest.purchaseBrownieMultiplier();
+            underTest.purchaseBrownieMultiplier();
+            expect(underTest.brownieMultiplierCount).toBe(2);
+        });
         
     });
 });
