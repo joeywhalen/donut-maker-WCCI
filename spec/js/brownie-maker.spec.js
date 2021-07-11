@@ -13,7 +13,7 @@ describe('FEATURE: Have a way to count vegan brownies', () => {
             underTest.recordClick();
             expect(underTest.clickCount).toBe(1);
         });
-        if ('Can retrieve 2 as a brownie count if 2 clicks recorded.', () => {
+        it ('Can retrieve 2 as a brownie count if 2 clicks recorded.', () => {
             underTest.recordClick();
             underTest.recordClick();
             expect(underTest.clickCount).toBe(2);
@@ -49,10 +49,8 @@ describe('FEATURE: Be able to purchase the first Auto Clicker with 100 brownies 
 
         it('Can subtract the Auto Clicker cost from the brownie count.', () => {
             underTest.purchaseAutoClicker();
-            underTest.purchaseAutoClicker();
-            underTest.purchaseAutoClicker();
-            expect(underTest.clickCount).toBe(150);
-            expect(underTest.autoClickerCount).toBe(3);
+            expect(underTest.clickCount).toBe(350);
+            expect(underTest.autoClickerCount).toBe(1);
         });
     });
 });
@@ -69,5 +67,7 @@ describe('FEATURE: The cost of each Auto Clicker will go up with each purchase',
         it('Should start with a click count of 300.', () => {
             expect(underTest.clickCount).toBe(300);
         });
+
+
     });
 });

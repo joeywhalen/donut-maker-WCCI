@@ -3,6 +3,7 @@ class BrownieMaker {
     constructor() {
         this.clickCount = 0;
         this.autoClickerCount = 0;
+        this.autoClickerCost = 100;
     }
 
     recordClick(){
@@ -14,8 +15,11 @@ class BrownieMaker {
     }
     
     purchaseAutoClicker() {
-        this.clickCount -= 100;
-        this.autoClickerCount++;
+        if (this.clickCount >= this.autoClickerCost) {
+            this.clickCount -= this.autoClickerCost;
+            this.autoClickerCount++;
+            this.autoClickerCost = Math.round(this.autoClickerCost * 1.10);
+        }
     }
 
 }
