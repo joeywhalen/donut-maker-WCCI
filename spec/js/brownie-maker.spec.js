@@ -61,13 +61,24 @@ describe('FEATURE: The cost of each Auto Clicker will go up with each purchase',
 
         beforeEach(() => {
             underTest = new BrownieMaker;
-            underTest.clickCount = 300;
+            underTest.clickCount = 400;
         });
 
         it('Should start with a click count of 300.', () => {
-            expect(underTest.clickCount).toBe(300);
+            expect(underTest.clickCount).toBe(400);
         });
 
+        it('Should subtract the Auto Clicker cost from the brownie count.', () => {
+            underTest.purchaseAutoClicker(); // Subtract 100
+            underTest.purchaseAutoClicker(); // Subtract 110
+            expect(underTest.clickCount).toBe(190);
+        });
 
+        it('Should subtract the Auto Clicker cost from the brownie count.', () => {
+            underTest.purchaseAutoClicker();
+            underTest.purchaseAutoClicker();
+            underTest.purchaseAutoClicker(); // Subtract 121
+            expect(underTest.clickCount).toBe(69);
+        });        
     });
 });
