@@ -108,3 +108,17 @@ describe('FEATURE: Ensure that there are enough clicks to buy an Auto Clicker.',
         });
     });
 });
+
+describe('FEATURE: The amount of Auto Clickers affect the amount of brownies added when an Activate Auto Clickers event is called', () => {
+    describe('When the Activate Auto Clickers event is executed, increase the brownie total by the amount of Auto Clickers owned', () => {
+        let underTest;
+
+        beforeEach(() => {
+            underTest = new BrownieMaker;
+            underTest.clickCount = 300;
+        });
+
+        
+
+    });
+});
