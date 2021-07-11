@@ -1,9 +1,9 @@
 class BrownieMaker {
 
     constructor() {
-        this.clickCount = 0;
-        this.autoClickerCount = 0;
-        this.autoClickerCost = 100;
+        this.clickCount = 0; // Number of brownies
+        this.autoClickerCount = 0; // Number of Auto Clickers purchased
+        this.autoClickerCost = 100; // Cost of first Auto Clicker
     }
 
     recordClick(){
@@ -11,7 +11,11 @@ class BrownieMaker {
     }
 
     recordAutoClick() {
-        this.clickCount++;
+        if (this.autoClickerCount < 2) {
+            this.clickCount++;
+        } else {
+            this.clickCount += this.autoClickerCount;
+        }
     }
     
     purchaseAutoClicker() {

@@ -115,10 +115,36 @@ describe('FEATURE: The amount of Auto Clickers affect the amount of brownies add
 
         beforeEach(() => {
             underTest = new BrownieMaker;
-            underTest.clickCount = 300;
+            underTest.clickCount = 400;
         });
 
-        
+        it('Should start with a click count of 300.', () => {
+            expect(underTest.clickCount).toBe(400);
+        });
 
+        it('Should count 1 brownie per click after purchasing first Auto Clicker.', () => {
+            underTest.purchaseAutoClicker(); // Subtract 100 brownies
+            underTest.recordAutoClick();
+            underTest.recordAutoClick();
+            expect(underTest.clickCount).toBe(302);
+        });
+
+        it('Should count 2 brownies per click after purchasing second Auto Clicker.', () => {
+            underTest.purchaseAutoClicker(); // Subtract 100 brownies
+            underTest.recordAutoClick(); // Add 1 brownie
+            underTest.purchaseAutoClicker(); // Subtract 110 brownies
+            underTest.recordAutoClick(); // Add 2 brownies
+            expect(underTest.clickCount).toBe(193);
+        });
+
+        it('Should count 3 brownies per click after purchasing third Auto Clicker.', () => {
+            underTest.purchaseAutoClicker();
+            underTest.recordAutoClick();
+            underTest.purchaseAutoClicker();
+            underTest.recordAutoClick();
+            underTest.purchaseAutoClicker();
+            underTest.recordAutoClick();
+            expect(underTest.clickCount).toBe(75);
+        });
     });
 });
