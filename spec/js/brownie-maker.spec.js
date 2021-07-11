@@ -173,6 +173,11 @@ describe('FEATURE: Be able to purchase the first brownie multiplier with 10 clic
             underTest.purchaseBrownieMultiplier();
             expect(underTest.brownieMultiplierCount).toBe(2);
         });
-        
+
+        it('Can subtract the Brownie Multiplier cost from the Brownie count.', () => {
+            underTest.purchaseBrownieMultiplier();
+            expect(underTest.clickCount).toBe(40);
+            expect(underTest.brownieMultiplierCount).toBe(1);
+        });
     });
 });
