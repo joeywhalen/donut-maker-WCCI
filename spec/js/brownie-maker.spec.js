@@ -148,3 +148,20 @@ describe('FEATURE: The amount of Auto Clickers affect the amount of brownies add
         });
     });
 });
+
+describe('FEATURE: Be able to purchase the first brownie multiplier with 10 clicks from your click count', () => {
+    describe('Can retrieve a Brownie Multiplier Count, add to a Brownie Multiplier count, and subtract a Brownie Multiplier cost from brownie count.', () => {
+        let underTest;
+
+        beforeEach(() => {
+            underTest = new BrownieMaker;
+            underTest.clickCount = 50;
+        });
+
+        it('Should start with a click count of 50.', () => {
+            expect(underTest.clickCount).toBe(50);
+        });
+
+        
+    });
+});
