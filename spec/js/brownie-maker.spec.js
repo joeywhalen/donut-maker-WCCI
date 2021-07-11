@@ -64,7 +64,7 @@ describe('FEATURE: The cost of each Auto Clicker will go up with each purchase',
             underTest.clickCount = 400;
         });
 
-        it('Should start with a click count of 300.', () => {
+        it('Should start with a click count of 400.', () => {
             expect(underTest.clickCount).toBe(400);
         });
 
@@ -80,5 +80,31 @@ describe('FEATURE: The cost of each Auto Clicker will go up with each purchase',
             underTest.purchaseAutoClicker(); // Subtract 121
             expect(underTest.clickCount).toBe(69);
         });        
+    });
+});
+
+describe('FEATURE: Ensure that there are enough clicks to buy an Auto Clicker.', () => {
+    describe('Prevent the Auto Clicker count from going up if there are not enough clicks to purcfhase an Auto Clicker.', () => {
+        let underTest;
+
+        beforeEach(() => {
+            underTest = new BrownieMaker;
+            underTest.clickCount = 400;
+        });
+
+        it('Should start with a click count of 400.', () => {
+            expect(underTest.clickCount).toBe(400);
+        });
+
+        it('Should not allow click count to increase by purchasing Auto Clicker when click count is below 100.', () => {
+            underTest.purchaseAutoClicker();
+            console.log(underTest.clickCount);
+            underTest.purchaseAutoClicker();
+            console.log(underTest.clickCount);
+            underTest.purchaseAutoClicker();
+            expect(underTest.clickCount).toBe(69);
+            underTest.purchaseAutoClicker();
+            console.log(underTest.clickCount);
+        });
     });
 });
