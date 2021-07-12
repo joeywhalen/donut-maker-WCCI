@@ -1,4 +1,4 @@
-describe('FEATURE: Have a way to count vegan brownies', () => {
+describe('FEATURE 1.1: Have a way to count vegan brownies.', () => {
     describe('Can add to brownie count, and retrieve brownie count.', () => {
         let underTest; //Has to be declared prior to beforeEach
 
@@ -21,7 +21,7 @@ describe('FEATURE: Have a way to count vegan brownies', () => {
     });
 });
 
-describe('FEATURE: Be able to purchase the first Auto Clicker with 100 brownies from your brownie count.', () => {
+describe('FEATURE 1.2: Be able to purchase the first Auto Clicker with 100 brownies from your brownie count.', () => {
     describe('Can retrieve an Auto Clicker Count, add to Auto Clicker count, and subtract Auto Clicker cost from brownie count.', () => {
         let underTest;
 
@@ -55,7 +55,7 @@ describe('FEATURE: Be able to purchase the first Auto Clicker with 100 brownies 
     });
 });
 
-describe('FEATURE: The cost of each Auto Clicker will go up with each purchase', () => {
+describe('FEATURE 1.3: The cost of each Auto Clicker will go up with each purchase', () => {
     describe('Increase the cost of the second Auto Clicker by 10%, and each additional Auto Clicker by additional 10%', () => {
         let underTest;
 
@@ -83,7 +83,7 @@ describe('FEATURE: The cost of each Auto Clicker will go up with each purchase',
     });
 });
 
-describe('FEATURE: Ensure that there are enough clicks to buy an Auto Clicker.', () => {
+describe('FEATURE 1.4: Ensure that there are enough clicks to buy an Auto Clicker.', () => {
     describe('Prevent the Auto Clicker count from going up if there are not enough clicks to purcfhase an Auto Clicker.', () => {
         let underTest;
 
@@ -109,7 +109,7 @@ describe('FEATURE: Ensure that there are enough clicks to buy an Auto Clicker.',
     });
 });
 
-describe('FEATURE: The amount of Auto Clickers affect the amount of brownies added when an Activate Auto Clickers event is called', () => {
+describe('FEATURE 1.5: The amount of Auto Clickers affect the amount of brownies added when an Activate Auto Clickers event is called', () => {
     describe('When the Activate Auto Clickers event is executed, increase the brownie total by the amount of Auto Clickers owned', () => {
         let underTest;
 
@@ -149,7 +149,7 @@ describe('FEATURE: The amount of Auto Clickers affect the amount of brownies add
     });
 });
 
-describe('FEATURE: Be able to purchase the first brownie multiplier with 10 clicks from your click count', () => {
+describe('FEATURE 2.1: Be able to purchase the first brownie multiplier with 10 clicks from your click count', () => {
     describe('Can retrieve a Brownie Multiplier Count, add to a Brownie Multiplier count, and subtract a Brownie Multiplier cost from brownie count.', () => {
         let underTest;
 
@@ -179,5 +179,34 @@ describe('FEATURE: Be able to purchase the first brownie multiplier with 10 clic
             expect(underTest.clickCount).toBe(40);
             expect(underTest.brownieMultiplierCount).toBe(1);
         });
+    });
+});
+
+describe('FEATURE 2.2: The cost of each Brownie Multiplier will go up with each purchase.', () => {
+    describe('Increase the cost of the second Brownie Multiplier by 10%, and each additional Brownie Multiplier by additional 10%', () => {
+        let underTest;
+
+        beforeEach(() => {
+            underTest = new BrownieMaker;
+            underTest.clickCount = 50;
+        });
+
+        it('Should start with a click count of 50, and a Brownie Multiplier count of 0.', () => {
+            expect(underTest.clickCount).toBe(50);
+            expect(underTest.brownieMultiplierCount).toBe(0);
+        });
+
+        it('Should subtract the Brownie Multiplier cost from the brownie count.', () => {
+            underTest.purchaseBrownieMultiplier(); // Subtract 10
+            underTest.purchaseBrownieMultiplier(); // Subtract 11
+            expect(underTest.clickCount).toBe(29);
+        });
+
+        it('Should subtract the Brownie Multiplier cost from the brownie count.', () => {
+            underTest.purchaseBrownieMultiplier();
+            underTest.purchaseBrownieMultiplier();
+            underTest.purchaseBrownieMultiplier(); // Subtract 12
+            expect(underTest.clickCount).toBe(17);
+        });                
     });
 });

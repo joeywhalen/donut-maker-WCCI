@@ -32,6 +32,7 @@ class BrownieMaker {
         if (this.clickCount >= this.brownieMultiplierCost) {
             this.clickCount -= this.brownieMultiplierCost;
             this.brownieMultiplierCount++;
+            this.brownieMultiplierCost = Math.round(this.brownieMultiplierCost * 1.10);
         }
     }
 
