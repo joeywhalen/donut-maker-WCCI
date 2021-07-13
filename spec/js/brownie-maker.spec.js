@@ -257,6 +257,21 @@ describe('FEATURE 2.4: The first Brownie Multiplier should increase the value of
             underTest.recordAutoClick();
             expect(underTest.clickCount).toBe(32);
         });
+    });
+});
+
+describe('FEATURE 2.5: The amount the subsequent Donut Multipliers click bonus will go up exponentially.', () => {
+    describe('ncrease the click value multiplier to 1.2 to the xth power, where _x_ is the amount of the Donut Multipliers count.', () => {
+        let underTest;
+
+        beforeEach(() => {
+            underTest = new BrownieMaker;
+            underTest.clickCount = 40;
+        });
+
+         it('Should start with a click count of 40.', () => {
+            expect(underTest.clickCount).toBe(40);
+        });
 
         it('Should count 1.728 brownies per click after the third Brownie Multiplier is purchased.', () => {
             underTest.purchaseBrownieMultiplier();
@@ -266,7 +281,6 @@ describe('FEATURE 2.4: The first Brownie Multiplier should increase the value of
             underTest.purchaseBrownieMultiplier();
             underTest.recordAutoClick();
             expect(underTest.clickCount).toBe(11);
-        })
-
-    });
+        });
+    }); 
 });
