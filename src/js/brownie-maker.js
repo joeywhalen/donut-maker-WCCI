@@ -12,11 +12,34 @@ class BrownieMaker {
         this.clickCount++;
     }
 
+    // recordAutoClick() {
+    //     if (this.autoClickerCount < 2) {
+    //         this.clickCount++;
+    //     } else {
+    //         this.clickCount += this.autoClickerCount;
+    //     }
+    // }
+
+    // recordAutoClick() {
+    //     if (this.autoClickerCount < 2) {
+    //         this.clickCount++;
+    //     } else if (this.brownieMultiplierCount < 1) {
+    //         this.clickCount += this.autoClickerCount;
+    //     } else {
+    //         this.clickCount += this.autoClickerCount;
+    //         this.clickCount += Math.pow(1.2, this.brownieMultiplierCount);
+    //     }
+    // }
+
     recordAutoClick() {
-        if (this.autoClickerCount < 2) {
+        if (this.autoClickerCount < 2 && this.brownieMultiplierCount < 1) {
             this.clickCount++;
+        } else if (this.brownieMultiplierCount < 1) {
+            this.clickCount += this.autoClickerCount;
         } else {
             this.clickCount += this.autoClickerCount;
+            this.clickCount += Math.pow(1.2, this.brownieMultiplierCount);
+            this.clickCount = Math.round(this.clickCount);
         }
     }
     

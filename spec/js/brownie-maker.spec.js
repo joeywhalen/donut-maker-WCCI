@@ -236,3 +236,37 @@ describe('FEATURE 2.3: Ensure that there are enough brownies to buy a Brownie Mu
         });
     });
 });
+
+describe('FEATURE 2.4: The first Brownie Multiplier should increase the value of a click 1.2x', () => {
+    describe('Increase the amount of brownies added to the brownie count by multiplying by 1.2 after the first Brownie Multiplier is purchased.', () => {
+        let underTest;
+
+        beforeEach(() => {
+            underTest = new BrownieMaker;
+            underTest.clickCount = 40;
+        });
+
+        it('Should start with a click count of 40.', () => {
+            expect(underTest.clickCount).toBe(40);
+        });
+
+        it('Should count 1.2 brownies per click after the first Brownie Multiplier is purchased.', () => {
+            underTest.purchaseBrownieMultiplier();
+            underTest.recordAutoClick();
+            expect(underTest.clickCount).toBe(31);
+            underTest.recordAutoClick();
+            expect(underTest.clickCount).toBe(32);
+        });
+
+        it('Should count 1.728 brownies per click after the third Brownie Multiplier is purchased.', () => {
+            underTest.purchaseBrownieMultiplier();
+            underTest.recordAutoClick();
+            underTest.purchaseBrownieMultiplier();
+            underTest.recordAutoClick();
+            underTest.purchaseBrownieMultiplier();
+            underTest.recordAutoClick();
+            expect(underTest.clickCount).toBe(11);
+        })
+
+    });
+});
