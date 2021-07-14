@@ -9,15 +9,28 @@ describe('FEATURE 1.1: Have a way to count vegan brownies.', () => {
         it('Should start with a click count of 0.', () => {
             expect(underTest.clickCount).toBe(0);
         });
+
         it('Can retrieve a brownie count.', () => {
             underTest.recordClick();
             expect(underTest.clickCount).toBe(1);
         });
+
         it ('Can retrieve 2 as a brownie count if 2 clicks recorded.', () => {
             underTest.recordClick();
             underTest.recordClick();
             expect(underTest.clickCount).toBe(2);
         });
+
+        it('Can retrieve 21 as a brownie count if 2 clicks recorded after purchasing 3 Brownie Multipliers.', () => {
+            underTest.clickCount = 50;
+            underTest.purchaseBrownieMultiplier();
+            underTest.purchaseBrownieMultiplier();
+            underTest.purchaseBrownieMultiplier();
+            underTest.recordClick();
+            underTest.recordClick();
+            expect(underTest.clickCount).toBe(21);
+        });
+
     });
 });
 
