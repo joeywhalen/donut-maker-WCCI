@@ -261,7 +261,7 @@ describe('FEATURE 2.4: The first Brownie Multiplier should increase the value of
 });
 
 describe('FEATURE 2.5: The amount the subsequent Donut Multipliers click bonus will go up exponentially.', () => {
-    describe('ncrease the click value multiplier to 1.2 to the xth power, where _x_ is the amount of the Donut Multipliers count.', () => {
+    describe('Increase the click value multiplier to 1.2 to the xth power, where _x_ is the amount of the Donut Multipliers count.', () => {
         let underTest;
 
         beforeEach(() => {
@@ -281,6 +281,33 @@ describe('FEATURE 2.5: The amount the subsequent Donut Multipliers click bonus
             underTest.purchaseBrownieMultiplier();
             underTest.recordAutoClick();
             expect(underTest.clickCount).toBe(11);
+        });
+    }); 
+});
+
+describe('FEATURE 2.7: Reset the game state.', () => {
+    describe('This action should reset the game to 0 donuts, 0 Auto Clickers, and 0 Donut Multipliers.', () => {
+        let underTest;
+
+        beforeEach(() => {
+            underTest = new BrownieMaker;
+            underTest.clickCount = 50;
+            underTest.autoClickerCount = 5;
+            underTest.brownieMultiplierCount = 5;
+        });
+
+         it('Should start with a click count of 50, Auto Clicker count of 5, and a Brownie Multiplier count of 5.', () => {
+             expect(underTest.clickCount).toBe(50);
+             expect(underTest.autoClickerCount).toBe(5);
+             expect(underTest.brownieMultiplierCount).toBe(5);
+
+        });
+
+        it('Should reset the game to 0 donuts, 0 Auto Clickers, and 0 Donut Multipliers.', () => {
+            underTest.brownieMakerReset();
+            expect(underTest.clickCount).toBe(0);
+            expect(underTest.autoClickerCount).toBe(0);
+            expect(underTest.brownieMultiplierCount).toBe(0);
         });
     }); 
 });

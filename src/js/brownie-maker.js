@@ -40,7 +40,7 @@ class BrownieMaker {
         }
     }
 
-    BrownieMakerReset() {
+    brownieMakerReset() {
         this.clickCount = 0;
         this.autoClickerCount = 0;
         this.brownieMultiplierCount = 0;
