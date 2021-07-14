@@ -31,6 +31,7 @@ class BrownieMaker {
             this.clickCount += Math.pow(1.2, this.brownieMultiplierCount);
             this.clickCount = Math.round(this.clickCount);
         }
+        console.log("click count: "+ this.clickCount);
     }
     
     purchaseAutoClicker() {
@@ -51,9 +52,7 @@ class BrownieMaker {
     }
 
     activateAutoClicker() {
-        setInterval(function () {
-            recordAutoClick();
-        }, 1000);
+        setInterval(this.recordAutoClick, 1000);
     }
 
     brownieMakerReset() {
