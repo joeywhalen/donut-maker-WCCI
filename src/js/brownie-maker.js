@@ -8,8 +8,17 @@ class BrownieMaker {
         this.brownieMultiplierCost = 10; //Cost of first Brownie Multiplier
     }
 
-    recordClick(){
-        this.clickCount++;
+    // recordClick(){
+    //     this.clickCount++;
+    // }
+
+    recordClick() {
+        if (this.brownieMultiplierCount < 1) {
+            this.clickCount++;
+        } else {
+            this.clickCount += Math.pow(1.2, this.brownieMultiplierCount);
+            this.clickCount = Math.round(this.clickCount);
+        }
     }
 
     recordAutoClick() {
