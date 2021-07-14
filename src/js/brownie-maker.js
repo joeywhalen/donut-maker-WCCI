@@ -37,7 +37,7 @@ class BrownieMaker {
         if (this.clickCount >= this.autoClickerCost) {
             this.clickCount -= this.autoClickerCost;
             this.autoClickerCount++;
-            activateAutoClicker();
+            this.activateAutoClicker();
             this.autoClickerCost = Math.round(this.autoClickerCost * 1.10);
         }
     }
