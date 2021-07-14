@@ -37,6 +37,7 @@ class BrownieMaker {
         if (this.clickCount >= this.autoClickerCost) {
             this.clickCount -= this.autoClickerCost;
             this.autoClickerCount++;
+            activateAutoClicker();
             this.autoClickerCost = Math.round(this.autoClickerCost * 1.10);
         }
     }
@@ -47,6 +48,12 @@ class BrownieMaker {
             this.brownieMultiplierCount++;
             this.brownieMultiplierCost = Math.round(this.brownieMultiplierCost * 1.10);
         }
+    }
+
+    activateAutoClicker() {
+        setInterval(function () {
+            recordAutoClick();
+        }, 1000);
     }
 
     brownieMakerReset() {
