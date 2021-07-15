@@ -13,7 +13,7 @@
             <div class="anchor"></div>
             <header class="header">
                 <nav class="header-nav">
-                    <div class="header-nav-popup" onclick="infoPopupButton() ">About the bakery
+                    <div class="headernavpopup" onclick="infoPopupButton() ">About the bakery
                         <span class="infopopup-text" id="infoPopup">It all begins with a simple click of a button.
                             (Easy!)
                             <br>
@@ -24,7 +24,8 @@
                             You can purchase Auto Clickers after 100 clicks. (Yay, automation!)</span>
                     </div>
                     <div class="header-nav-item">
-                        <a class="header-nav-link" href="https://orteil.dashnet.org/cookieclicker/" target="_blank">Inspiration for the
+                        <a class="header-nav-link" href="https://orteil.dashnet.org/cookieclicker/"
+                            target="_blank">Inspiration for the
                             bakery</a>
                     </div>
                     <div class="header-nav-item">
@@ -67,9 +68,14 @@
                 </section>
             </main>
         </div>
-        <script src="./src/js/nav-menu.js" type="module"></script>
+        <script>
+            function infoPopupButton() {
+                var headernavpopup = document.getElementById("infoPopup");
+                popup.classList.toggle("show");
+            }
+        </script>
+        <!-- <script src="./src/js/nav-menu.js" type="module"></script> -->
         <script src="./src/js/brownie-maker.js"></script>
-        
     </body>
 
 </html>

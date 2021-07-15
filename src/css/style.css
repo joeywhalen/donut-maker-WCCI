@@ -17,7 +17,7 @@ img {
 /* NAV MENU */
 /* -------------------------------------- */
 
-.header-nav-popup {
+.headernavpopup {
     position: relative;
     display: inline-block;
     cursor: pointer;
@@ -27,7 +27,7 @@ img {
     user-select: none;
 }
 
-.header-nav-popup .infopopup-text {
+.headernavpopup .infopopup-text {
     visibility: hidden;
     width: 160px;
     background-color: #555;
@@ -42,7 +42,7 @@ img {
     margin-left: -80px;
 }
 
-.header-nav-popup .infopopup-text::after {
+.headernavpopup .infopopup-text::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -53,7 +53,7 @@ img {
     border-color: #555 transparent transparent transparent;
 }
 
-.header-nav-popup .show {
+.headernavpopup .show {
     visibility: visible;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
