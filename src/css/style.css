@@ -1,0 +1,14 @@
+/* -------------------------------------- */
+/* BASIC SETUP */
+/* -------------------------------------- */
+
+body {
+    background-color: khaki;
+    height: auto;
+
+}
+
+img {
+    max-width: 300px;
+    height: auto;
+}
