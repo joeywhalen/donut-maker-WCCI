@@ -237,9 +237,7 @@ img {
 /* MAIN CONTENT */
 /* -------------------------------------- */
 
-/* -------------------------------------- */
-/* CLICK CONTENT */
-/* -------------------------------------- */
+/* Click Content */
 
 .click-content {
     display: flex;
@@ -249,6 +247,8 @@ img {
     justify-content: center;
     align-items: center;
 }
+
+/* Auto Clicker & Brownie Multiplier Content */
 
 .auto-multiplier-content {
     display: flex;
