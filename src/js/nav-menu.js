@@ -2,5 +2,5 @@
 
 function infoPopupButton() {
     const headernavopup = document.getElementById("infoPopup");
-    popup.classList.toggle("show");
+    headernavpopup.classList.toggle("show");
 }
