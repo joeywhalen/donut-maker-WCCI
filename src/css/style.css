@@ -228,10 +228,19 @@ img {
     cursor: pointer;
 }
 
-#modal-nav-links:active {
+/* .modal-links {
     display: flex;
-    color: #000
+} */
+
+.modal-links a {
+    display: flex;
+    color: #000;
 }
+
+/* #modal-nav-links:active {
+    display: flex;
+    color: #000;
+} */
 
 /* -------------------------------------- */
 /* MAIN CONTENT */
