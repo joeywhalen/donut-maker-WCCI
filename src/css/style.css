@@ -57,9 +57,34 @@ img {
     justify-content: space-between;
 }
 
-.header-nav-inspire-link {
-    color: black;
+#nav-link {
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 5px;
 }
+
+#nav-link:visited,
+#nav-link:link {
+    /* background-color: #69140e; */
+    background-color: #d58936;
+    color: black;
+    /* color: white; */
+    border: 2px solid white;
+}
+
+#nav-link:active {
+    background-color: white;
+    color: #69140e;
+    border: 2px solid #69140e;
+    border-radius: 5px;
+    box-shadow: 2px 2px 3px rgba(31, 27, 27, 0.25);
+}
+
+/* .header-nav-inspire-link {
+    color: black;
+} */
 
 .headernavpopup {
     position: relative;
