@@ -232,3 +232,29 @@ img {
     display: flex;
     color: #000
 }
+
+/* -------------------------------------- */
+/* MAIN CONTENT */
+/* -------------------------------------- */
+
+/* -------------------------------------- */
+/* CLICK CONTENT */
+/* -------------------------------------- */
+
+.click-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: center;
+    align-items: center;
+}
+
+.auto-multiplier-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-evenly;
+    align-items: center;
+}
