@@ -15,28 +15,28 @@ class BrownieMaker {
     recordClick() {
         if (this.brownieMultiplierCount < 1) {
             this.clickCount++;
-            brownieCount.innerHTML = this.clickCount;
+            // brownieCount.innerHTML = this.clickCount;
         } else {
             this.clickCount += Math.pow(1.2, this.brownieMultiplierCount);
             this.clickCount = Math.round(this.clickCount);
-            brownieCount.innerHTML = this.clickCount;
+            // brownieCount.innerHTML = this.clickCount;
         }
     }
 
     recordAutoClick() {
         if (this.autoClickerCount < 2 && this.brownieMultiplierCount < 1) {
             this.clickCount++;
-            brownieCount.innerHTML = this.clickCount;
+            // brownieCount.innerHTML = this.clickCount;
         } else if (this.brownieMultiplierCount < 1) {
             this.clickCount += this.autoClickerCount;
-            brownieCount.innerHTML = this.clickCount;
+            // brownieCount.innerHTML = this.clickCount;
         } else {
             this.clickCount += this.autoClickerCount;
             this.clickCount += Math.pow(1.2, this.brownieMultiplierCount);
             this.clickCount = Math.round(this.clickCount);
-            brownieCount.innerHTML = this.clickCount;
+            // brownieCount.innerHTML = this.clickCount;
         }
-        console.log("click count: "+ this.clickCount);
+        // console.log("click count: "+ this.clickCount);
     }
     
     purchaseAutoClicker() {
