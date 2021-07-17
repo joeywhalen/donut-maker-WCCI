@@ -4,6 +4,7 @@ const newBrownie = new BrownieMaker();
 
 const brownieButton = document.querySelector(".brownie-button");
 const brownieCount = document.querySelector(".click-count");
+brownieCount.innerHTML = newBrownie.clickCount;
 
 const purchaseAutoClickerButton = document.querySelector(".purchase-auto-clicker-button");
 const autoClickerCount = document.querySelector(".auto-clicker-count");
@@ -14,14 +15,17 @@ const brownieMultiplierCount = document.querySelector(".brownie-multiplier-count
 brownieButton.addEventListener("click", () => {
     newBrownie.recordClick();
     console.log(newBrownie.clickCount);
+    brownieCount.innerHTML = newBrownie.brownieCount();
+    // document.querySelector(".click-count").innerHTML = newBrownie.clickCount;
 });
 
-const updateBrownieCount = function (newBrownie) {
-    newBrownie.brownieCount();
-    brownieCount.innerHTML = "5";
-    brownieCount.innerHTML = newBrownie.clickCount;
-    brownieCount.innerText = newBrownie.clickCount;
-}
+// const updateBrownieCount = function (newBrownie) {
+//     newBrownie.brownieCount();
+//     newBrownie.clickCount;
+//     brownieCount.innerHTML = 5;
+//     brownieCount.innerHTML = newBrownie.clickCount;
+//     brownieCount.innerText = newBrownie.clickCount;
+// }
 
 const updBrownieCount = newBrownie.brownieCount();
 
