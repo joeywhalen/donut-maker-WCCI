@@ -15,21 +15,26 @@ class BrownieMaker {
     recordClick() {
         if (this.brownieMultiplierCount < 1) {
             this.clickCount++;
+            brownieCount.innerHTML = this.clickCount;
         } else {
             this.clickCount += Math.pow(1.2, this.brownieMultiplierCount);
             this.clickCount = Math.round(this.clickCount);
+            brownieCount.innerHTML = this.clickCount;
         }
     }
 
     recordAutoClick() {
         if (this.autoClickerCount < 2 && this.brownieMultiplierCount < 1) {
             this.clickCount++;
+            brownieCount.innerHTML = this.clickCount;
         } else if (this.brownieMultiplierCount < 1) {
             this.clickCount += this.autoClickerCount;
+            brownieCount.innerHTML = this.clickCount;
         } else {
             this.clickCount += this.autoClickerCount;
             this.clickCount += Math.pow(1.2, this.brownieMultiplierCount);
             this.clickCount = Math.round(this.clickCount);
+            brownieCount.innerHTML = this.clickCount;
         }
         console.log("click count: "+ this.clickCount);
     }
@@ -38,7 +43,9 @@ class BrownieMaker {
         if (this.clickCount >= this.autoClickerCost) {
             this.clickCount -= this.autoClickerCost;
             this.autoClickerCount++;
-            this.activateAutoClicker();
+            setInterval(() => {
+                this.recordClick();
+            }, 1000);
             this.autoClickerCost = Math.round(this.autoClickerCost * 1.10);
         }
     }
@@ -51,20 +58,12 @@ class BrownieMaker {
         }
     }
 
-    activateAutoClicker() {
-        setInterval(this.recordAutoClick, 1000);
-        this.recordAutoClick;
-    }
-
     brownieMakerReset() {
-        this.clickCount = 0;
-        this.autoClickerCount = 0;
-        this.brownieMultiplierCount = 0;
+        location.reload();
+        // this.clickCount = 0;
+        // this.autoClickerCount = 0;
+        // this.brownieMultiplierCount = 0;
     }
-
-    // get clickCount() {
-    //     return this.clickCount;
-    // }
 
 }
 // export { BrownieMaker }
