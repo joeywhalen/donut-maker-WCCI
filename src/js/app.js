@@ -15,10 +15,8 @@ const brownieMultiplierCost = document.querySelector(".brownie-multiplier-cost")
 
 const brownieReset = document.querySelector(".reset-button");
 
-
 brownieButton.addEventListener("click", () => {
     newBrownie.recordClick();
-    console.log(newBrownie.clickCount);
     brownieCount.innerHTML = newBrownie.clickCount;
 });
 
@@ -28,17 +26,13 @@ const updateBrownieCount = function (newBrownie) {
 
 purchaseAutoClickerButton.addEventListener("click", () => {
     newBrownie.purchaseAutoClicker();
-    console.log(newBrownie.autoClickerCount);
     autoClickerCount.innerHTML = newBrownie.autoClickerCount;
-    console.log(newBrownie.autoClickerCost);
     autoClickerCost.innerHTML = newBrownie.autoClickerCost;
 });
 
 purchaseBrownieMultiplierButton.addEventListener("click", () => {
     newBrownie.purchaseBrownieMultiplier();
-    console.log(newBrownie.brownieMultiplierCount);
     brownieMultiplierCount.innerHTML = newBrownie.brownieMultiplierCount;
-    console.log(newBrownie.brownieMultiplierCost);
     brownieMultiplierCost.innerHTML = newBrownie.brownieMultiplierCost;
 });
 

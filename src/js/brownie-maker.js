@@ -60,9 +60,6 @@ class BrownieMaker {
 
     brownieMakerReset() {
         location.reload();
-        // this.clickCount = 0;
-        // this.autoClickerCount = 0;
-        // this.brownieMultiplierCount = 0;
     }
 
 }
