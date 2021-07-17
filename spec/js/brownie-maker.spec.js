@@ -324,3 +324,24 @@ describe('FEATURE 2.7: Reset the game state.', () => {
         });
     }); 
 });
+
+describe('FEATURE 2.8: Check game play', () => {
+    describe('Check full functionality of the game', () => {
+        let underTest;
+
+        beforeEach(() => {
+            underTest = new BrownieMaker;
+            underTest.clickCount = 500;
+        });
+
+        it('Should check full functionality of the game for correct click count.', () => {
+            underTest.purchaseBrownieMultiplier();
+            console.log(underTest.clickCount);
+            underTest.purchaseAutoClicker();
+            console.log(underTest.clickCount);
+            expect(underTest.clickCount).toBe(390);
+            underTest.recordClick();
+            expect(underTest.clickCount).toBe(391);
+        });
+    });
+});

@@ -53,6 +53,7 @@ class BrownieMaker {
 
     activateAutoClicker() {
         setInterval(this.recordAutoClick, 1000);
+        this.recordAutoClick;
     }
 
     brownieMakerReset() {
@@ -66,4 +67,4 @@ class BrownieMaker {
     // }
 
 }
-export { BrownieMaker }
+// export { BrownieMaker }
