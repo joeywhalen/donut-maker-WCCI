@@ -2,7 +2,8 @@
 
 function infoPopupButton() {
     const headernavpopup = document.getElementById("infoPopup");
-    // headernavpopup = document.querySelector("#infoPopup");
+    // const headernavpopup = document.querySelector("#infoPopup"); id
+    // const headernavpopup = document.querySelector(".infoPopup"); class
     headernavpopup.classList.toggle("show");
 }
 

@@ -62,3 +62,4 @@ class BrownieMaker {
     }
 
 }
+export { BrownieMaker }
