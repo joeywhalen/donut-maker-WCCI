@@ -8,9 +8,9 @@ class BrownieMaker {
         this.brownieMultiplierCost = 10; //Cost of first Brownie Multiplier
     }
 
-    // recordClick(){
-    //     this.clickCount++;
-    // }
+    brownieCount() {
+        return this.clickCount;
+    }
 
     recordClick() {
         if (this.brownieMultiplierCount < 1) {
@@ -60,6 +60,10 @@ class BrownieMaker {
         this.autoClickerCount = 0;
         this.brownieMultiplierCount = 0;
     }
+
+    // get clickCount() {
+    //     return this.clickCount;
+    // }
 
 }
 export { BrownieMaker }
