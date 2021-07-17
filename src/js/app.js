@@ -13,6 +13,8 @@ const purchaseBrownieMultiplierButton = document.querySelector(".purchase-browni
 const brownieMultiplierCount = document.querySelector(".brownie-multiplier-count");
 const brownieMultiplierCost = document.querySelector(".brownie-multiplier-cost");
 
+const brownieReset = document.querySelector(".reset-button");
+
 
 brownieButton.addEventListener("click", () => {
     newBrownie.recordClick();
