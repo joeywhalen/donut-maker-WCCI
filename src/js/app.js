@@ -38,7 +38,6 @@ function playResetAudio() {
 };
 
 function playAutoClickerAudio() {
-    // document.getElementById("clickerButton").disabled = true;
     autoClickerAudio.play();
 };
 
@@ -47,12 +46,14 @@ function playMultiplierAudio() {
 };
 
 const disableAutoClickerButton = function () {
-    if (this.clickCount < this.autoClickerCost) {
+    if (newBrownie.clickCount < newBrownie.autoClickerCost) {
         document.getElementById("clickerButton").disabled = true;
     } else {
         document.getElementById("clickerButton").disabled = false;
     }
 };
+
+
 
 purchaseAutoClickerButton.addEventListener("click", () => {
     newBrownie.purchaseAutoClicker();

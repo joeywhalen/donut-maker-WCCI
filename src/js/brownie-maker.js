@@ -22,7 +22,7 @@ class BrownieMaker {
             this.clickCount = Math.round(this.clickCount);
             brownieCount.innerHTML = this.clickCount;
         }
-        // disableAutoClickerButton();
+        disableAutoClickerButton();
     }
 
     recordAutoClick() {
