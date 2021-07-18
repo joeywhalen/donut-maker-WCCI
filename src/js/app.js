@@ -17,6 +17,7 @@ const brownieMultiplierCost = document.querySelector(".brownie-multiplier-cost")
 const brownieAudio = document.getElementById("brownieButtonAudio");
 const resetAudio = document.getElementById("resetButtonAudio");
 const autoClickerAudio = document.getElementById("autoClickerButtonAudio");
+const brownieMultiplierAudio = document.getElementById("multiplierButtonAudio");
 
 const brownieReset = document.querySelector(".reset-button");
 
@@ -37,7 +38,11 @@ function playResetAudio() {
 
 function playAutoClickerAudio() {
     autoClickerAudio.play();
-}
+};
+
+function playMultiplierAudio() {
+    brownieMultiplierAudio.play();
+};
 
 // const disableAutoClickerButton = function () {
 //     if (this.clickCount < this.autoClickerCost) {
@@ -62,6 +67,6 @@ purchaseBrownieMultiplierButton.addEventListener("click", () => {
 });
 
 brownieReset.addEventListener("click", () => {
-    newBrownie.playResetAudio();
+    // newBrownie.playResetAudio();
     newBrownie.brownieMakerReset();
 });

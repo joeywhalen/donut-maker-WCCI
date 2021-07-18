@@ -88,7 +88,11 @@
                             <h3 class="auto-clicker-cost">100</h3>
                         </div>
                         <div class="brownie-multipliers">
-                            <button type="button" class="purchase-brownie-multiplier-button">Purchase Brownie
+                            <audio id="multiplierButtonAudio">
+                                <source src="src/resources/audio/Mmm-yummy.mp3" type="audio/mpeg">Your browser does not
+                                support the audio element.
+                            </audio>
+                            <button onclick="playMultiplierAudio()" type="button" class="purchase-brownie-multiplier-button">Purchase Brownie
                                 Multiplier</button>
                             <h3 class="brownie-multiplier-count-title">Brownie Multipliers:</h3>
                             <h3 class="brownie-multiplier-count">0</h3>
