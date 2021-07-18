@@ -57,6 +57,8 @@ class BrownieMaker {
             }, 1000);
             this.autoClickerCost = Math.round(this.autoClickerCost * 1.10);
         }
+        disableAutoClickerButton();
+        disableBrownieMultiplierButton();
     }
 
     purchaseBrownieMultiplier() {
@@ -65,6 +67,8 @@ class BrownieMaker {
             this.brownieMultiplierCount++;
             this.brownieMultiplierCost = Math.round(this.brownieMultiplierCost * 1.10);
         }
+        disableAutoClickerButton();
+        disableBrownieMultiplierButton();
     }
 
     brownieMakerReset() {

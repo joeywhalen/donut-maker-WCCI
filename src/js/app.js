@@ -73,6 +73,7 @@ purchaseBrownieMultiplierButton.addEventListener("click", () => {
     brownieMultiplierCost.innerHTML = newBrownie.brownieMultiplierCost;
     newBrownie.showBrowniesPerClick();
     brownieClickValue.innerHTML = newBrownie.browniesPerClick;
+    brownieCount.innerHTML = newBrownie.clickCount;
 });
 
 // brownieReset.addEventListener("click", () => {
