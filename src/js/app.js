@@ -34,6 +34,7 @@ function playBrownieAudio() {
 
 function playResetAudio() {
     resetAudio.play();
+    newBrownie.brownieMakerReset();
 };
 
 function playAutoClickerAudio() {
@@ -66,7 +67,7 @@ purchaseBrownieMultiplierButton.addEventListener("click", () => {
     brownieClickValue.innerHTML = newBrownie.browniesPerClick;
 });
 
-brownieReset.addEventListener("click", () => {
-    // newBrownie.playResetAudio();
-    newBrownie.brownieMakerReset();
-});
+// brownieReset.addEventListener("click", () => {
+//     // newBrownie.playResetAudio();
+//     newBrownie.brownieMakerReset();
+// });

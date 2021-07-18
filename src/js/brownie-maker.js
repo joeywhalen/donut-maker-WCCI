@@ -65,8 +65,9 @@ class BrownieMaker {
     }
 
     brownieMakerReset() {
-        location.reload();
+        setTimeout(() => {
+            location.reload();
+        }, 2000);
     }
-
 }
 // export { BrownieMaker }
