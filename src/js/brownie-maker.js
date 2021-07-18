@@ -29,20 +29,20 @@ class BrownieMaker {
         if (this.autoClickerCount < 2 && this.brownieMultiplierCount < 1) {
             this.clickCount++;
             brownieCount.innerHTML = this.clickCount;
-            showBrowniesPerClick();
-            brownieClickValue.innerHTML = this.browniesPerClick;
+            // newBrownie.showBrowniesPerClick();
+            // brownieClickValue.innerHTML = newBrownie.browniesPerClick;
         } else if (this.brownieMultiplierCount < 1) {
             this.clickCount += this.autoClickerCount;
             brownieCount.innerHTML = this.clickCount;
-            showBrowniesPerClick();
-            brownieClickValue.innerHTML = this.browniesPerClick;
+            // newBrownie.showBrowniesPerClick();
+            // brownieClickValue.innerHTML = newBrownie.browniesPerClick;
         } else {
             this.clickCount += this.autoClickerCount;
             this.clickCount += Math.pow(1.2, this.brownieMultiplierCount);
             this.clickCount = Math.round(this.clickCount);
             brownieCount.innerHTML = this.clickCount;
-            showBrowniesPerClick();
-            brownieClickValue.innerHTML = this.browniesPerClick;
+            // newBrownie.showBrowniesPerClick();
+            // brownieClickValue.innerHTML = newBrownie.browniesPerClick;
         }
     }
 
