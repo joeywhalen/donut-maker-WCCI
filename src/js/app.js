@@ -28,11 +28,11 @@ brownieButton.addEventListener("click", () => {
 
 function playBrownieAudio() {
     brownieAudio.play();
-}
+};
 
 function playResetAudio() {
     resetAudio.play();
-}
+};
 
 // const disableAutoClickerButton = function () {
 //     if (this.clickCount < this.autoClickerCost) {
@@ -57,5 +57,6 @@ purchaseBrownieMultiplierButton.addEventListener("click", () => {
 });
 
 brownieReset.addEventListener("click", () => {
+    newBrownie.playResetAudio();
     newBrownie.brownieMakerReset();
 });
