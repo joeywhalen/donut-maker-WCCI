@@ -2,6 +2,13 @@
 /* BASIC SETUP */
 /* -------------------------------------- */
 
+#canvas {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 3;
+}
+
 body {
     /* background-color: khaki; */
     /* background-color: #2f4353;
