@@ -6,7 +6,7 @@ class BrownieMaker {
         this.autoClickerCost = 10; // Cost of first Auto Clicker
         this.brownieMultiplierCount = 0; // Number of Brownie Multipliers purchased
         this.brownieMultiplierCost = 10; //Cost of first Brownie Multiplier
-        // this.browniesPerClick = 1; // Number of brownies baked per click with no Brownie Multipliers
+        this.browniesPerClick = 1; // Number of brownies baked per click with no Brownie Multipliers
     }
 
     brownieCount() {
@@ -29,20 +29,27 @@ class BrownieMaker {
         if (this.autoClickerCount < 2 && this.brownieMultiplierCount < 1) {
             this.clickCount++;
             brownieCount.innerHTML = this.clickCount;
+            showBrowniesPerClick();
+            brownieClickValue.innerHTML = this.browniesPerClick;
         } else if (this.brownieMultiplierCount < 1) {
             this.clickCount += this.autoClickerCount;
             brownieCount.innerHTML = this.clickCount;
+            showBrowniesPerClick();
+            brownieClickValue.innerHTML = this.browniesPerClick;
         } else {
             this.clickCount += this.autoClickerCount;
             this.clickCount += Math.pow(1.2, this.brownieMultiplierCount);
             this.clickCount = Math.round(this.clickCount);
             brownieCount.innerHTML = this.clickCount;
+            showBrowniesPerClick();
+            brownieClickValue.innerHTML = this.browniesPerClick;
         }
     }
 
-    // showBrowniesPerClick() {
-    //     this.browniesPerClick = Math.pow(1.2, this.brownieMultiplierCount);
-    // }
+    showBrowniesPerClick() {
+        this.browniesPerClick = Math.pow(1.2, this.brownieMultiplierCount);
+        
+    }
     
     purchaseAutoClicker() {
         if (this.clickCount >= this.autoClickerCost) {
