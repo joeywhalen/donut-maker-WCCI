@@ -23,13 +23,13 @@ brownieButton.addEventListener("click", () => {
     // brownieClickValue.innerHTML = newBrownie.browniesPerClick;
 });
 
-const disableAutoClickerButton = function () {
-    if (this.clickCount < this.autoClickerCost) {
-        document.getElementById("clickerButton").disabled = true;
-    } else {
-        document.getElementById("clickerButton").disabled = false;
-    }
-};
+// const disableAutoClickerButton = function () {
+//     if (this.clickCount < this.autoClickerCost) {
+//         document.getElementById("clickerButton").disabled = true;
+//     } else {
+//         document.getElementById("clickerButton").disabled = false;
+//     }
+// };
 
 // const updateBrownieCount = function (newBrownie) {
 //     brownieCount.innerHTML = newBrownie.brownieCount();

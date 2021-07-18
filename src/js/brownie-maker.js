@@ -3,7 +3,7 @@ class BrownieMaker {
     constructor() {
         this.clickCount = 0; // Number of brownies
         this.autoClickerCount = 0; // Number of Auto Clickers purchased
-        this.autoClickerCost = 100; // Cost of first Auto Clicker
+        this.autoClickerCost = 10; // Cost of first Auto Clicker
         this.brownieMultiplierCount = 0; // Number of Brownie Multipliers purchased
         this.brownieMultiplierCost = 10; //Cost of first Brownie Multiplier
         this.browniesPerClick = 1; // Number of brownies baked per click with no Brownie Multipliers
@@ -35,9 +35,9 @@ class BrownieMaker {
         }
     }
 
-    showBrowniesPerClick() {
-        this.browniesPerClick = Math.pow(1.2, this.brownieMultiplierCount);
-    }
+    // showBrowniesPerClick() {
+    //     this.browniesPerClick = Math.pow(1.2, this.brownieMultiplierCount);
+    // }
     
     purchaseAutoClicker() {
         if (this.clickCount >= this.autoClickerCost) {
