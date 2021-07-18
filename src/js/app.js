@@ -31,10 +31,6 @@ brownieButton.addEventListener("click", () => {
 //     }
 // };
 
-// const updateBrownieCount = function (newBrownie) {
-//     brownieCount.innerHTML = newBrownie.brownieCount();
-// };
-
 purchaseAutoClickerButton.addEventListener("click", () => {
     newBrownie.purchaseAutoClicker();
     autoClickerCount.innerHTML = newBrownie.autoClickerCount;
