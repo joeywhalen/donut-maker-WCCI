@@ -20,6 +20,10 @@ brownieButton.addEventListener("click", () => {
     brownieCount.innerHTML = newBrownie.clickCount;
 });
 
+function disableAutoClickerButton() {
+    document.getElementById("#clickerButton").disabled = true;
+};
+
 // const updateBrownieCount = function (newBrownie) {
 //     brownieCount.innerHTML = newBrownie.brownieCount();
 // };
