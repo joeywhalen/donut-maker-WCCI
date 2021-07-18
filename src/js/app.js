@@ -18,6 +18,7 @@ const brownieAudio = document.getElementById("brownieButtonAudio");
 const resetAudio = document.getElementById("resetButtonAudio");
 const autoClickerAudio = document.getElementById("autoClickerButtonAudio");
 const brownieMultiplierAudio = document.getElementById("multiplierButtonAudio");
+const dudeAudio = document.getElementById("dudeButtonAudio");
 
 const brownieReset = document.querySelector(".reset-button");
 
@@ -44,6 +45,10 @@ function playAutoClickerAudio() {
 function playMultiplierAudio() {
     brownieMultiplierAudio.play();
 };
+
+function playDudeAudio() {
+    dudeAudio.play();
+}
 
 const disableAutoClickerButton = function () {
     if (newBrownie.clickCount < newBrownie.autoClickerCost) {
