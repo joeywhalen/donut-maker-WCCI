@@ -76,7 +76,11 @@
                 <section>
                     <div class="auto-multiplier-content">
                         <div class="auto-clickers">
-                            <button type="button" id="clickerButton" class="purchase-auto-clicker-button">Purchase Auto
+                            <audio id="autoClickerButtonAudio">
+                                <source src="src/resources/audio/yay.wav" type="audio/wav">Your browser does not support the audio element.
+                            </audio>
+                            <button onclick="playAutoClickerAudio()" type="button" id="clickerButton"
+                                class="purchase-auto-clicker-button">Purchase Auto
                                 Clicker</button>
                             <h3 class="auto-clicker-count-title">Auto Clickers:</h3>
                             <h3 class="auto-clicker-count">0</h3>

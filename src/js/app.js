@@ -16,6 +16,7 @@ const brownieMultiplierCost = document.querySelector(".brownie-multiplier-cost")
 
 const brownieAudio = document.getElementById("brownieButtonAudio");
 const resetAudio = document.getElementById("resetButtonAudio");
+const autoClickerAudio = document.getElementById("autoClickerButtonAudio");
 
 const brownieReset = document.querySelector(".reset-button");
 
@@ -33,6 +34,10 @@ function playBrownieAudio() {
 function playResetAudio() {
     resetAudio.play();
 };
+
+function playAutoClickerAudio() {
+    autoClickerAudio.play();
+}
 
 // const disableAutoClickerButton = function () {
 //     if (this.clickCount < this.autoClickerCost) {
