@@ -20,9 +20,9 @@ brownieButton.addEventListener("click", () => {
     brownieCount.innerHTML = newBrownie.clickCount;
 });
 
-const updateBrownieCount = function (newBrownie) {
-    brownieCount.innerHTML = newBrownie.brownieCount();
-};
+// const updateBrownieCount = function (newBrownie) {
+//     brownieCount.innerHTML = newBrownie.brownieCount();
+// };
 
 purchaseAutoClickerButton.addEventListener("click", () => {
     newBrownie.purchaseAutoClicker();
