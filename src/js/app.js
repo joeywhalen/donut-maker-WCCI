@@ -53,7 +53,13 @@ const disableAutoClickerButton = function () {
     }
 };
 
-
+const disableBrownieMultiplierButton = function () {
+    if (newBrownie.clickCount < newBrownie.brownieMultiplierCost) {
+        document.getElementById("multiplierButton").disabled = true;
+    } else {
+        document.getElementById("multiplierButton").disabled = false;
+    }
+};
 
 purchaseAutoClickerButton.addEventListener("click", () => {
     newBrownie.purchaseAutoClicker();

@@ -23,6 +23,7 @@ class BrownieMaker {
             brownieCount.innerHTML = this.clickCount;
         }
         disableAutoClickerButton();
+        disableBrownieMultiplierButton();
     }
 
     recordAutoClick() {
@@ -38,6 +39,8 @@ class BrownieMaker {
             this.clickCount = Math.round(this.clickCount);
             brownieCount.innerHTML = this.clickCount;
         }
+        disableAutoClickerButton();
+        disableBrownieMultiplierButton();
     }
 
     showBrowniesPerClick() {
