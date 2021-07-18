@@ -38,6 +38,7 @@ function playResetAudio() {
 };
 
 function playAutoClickerAudio() {
+    // document.getElementById("clickerButton").disabled = true;
     autoClickerAudio.play();
 };
 
@@ -45,13 +46,13 @@ function playMultiplierAudio() {
     brownieMultiplierAudio.play();
 };
 
-// const disableAutoClickerButton = function () {
-//     if (this.clickCount < this.autoClickerCost) {
-//         document.getElementById("clickerButton").disabled = true;
-//     } else {
-//         document.getElementById("clickerButton").disabled = false;
-//     }
-// };
+const disableAutoClickerButton = function () {
+    if (this.clickCount < this.autoClickerCost) {
+        document.getElementById("clickerButton").disabled = true;
+    } else {
+        document.getElementById("clickerButton").disabled = false;
+    }
+};
 
 purchaseAutoClickerButton.addEventListener("click", () => {
     newBrownie.purchaseAutoClicker();
