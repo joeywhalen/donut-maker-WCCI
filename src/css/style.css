@@ -276,7 +276,8 @@ img {
     position: absolute;
     top: 0px;
     left: 0px;
-    z-index: 3;
+    /* z-index: 3; */
+    z-index: -1;
 }
 
 #overlay {
@@ -286,7 +287,6 @@ img {
 #overlay-transparent {
     z-index: 4;
     opacity: 0;
-
 }
 
 #overlay-transparent:hover {
@@ -302,7 +302,6 @@ img {
 #overlay-transparent {
     z-index: 4;
     opacity: 0;
-
 }
 
 .brownie-spawn {
