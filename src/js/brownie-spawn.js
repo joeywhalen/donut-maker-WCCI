@@ -75,3 +75,60 @@ class BurstParticle{
     }
 }
 
+// Animation Functions
+
+function init(){
+    particleArray = [];
+}
+
+function animate(){
+    if(document.getElementById('canvasContext') == null){
+        console.error("Don't copy and paste without knowing what the code does!");
+        return;
+    }
+    requestAnimationFrame(animate);
+    canvas.width = window.innerWidth; // dynamically changes the width of the canvas
+    canvas.height = window.innerHeight;
+    context.clearRect(0,0,innerWidth, innerHeight);
+    if(keepSpawning && particleArray.length < maxSize){
+        particleArray.push(new Particle());
+    }
+    for(let i = 0; i < particleArray.length; i++){
+        particleArray[i].update(i);
+    }
+}
+
+//Functions To Spawn Particles
+
+function spawnParticle(){
+    if(particleArray.length < maxSize){
+        particleArray.push(new Particle());
+    }
+}
+
+function spawnManyParticles(){
+    keepSpawning = !keepSpawning; // toggle our keep spawning value
+}
+
+function spawnBurst(){
+    if(keepSpawning){
+        keepSpawning = false;
+        spawnInterval = null;
+    }
+    else{
+        keepSpawning = true;
+        spawnInterval = setTimeout(spawnManyParticles, 2000);
+    }
+}
+
+function mouseBurst(e){ // e is the location of the mouse event
+    for(let i = 0; i < 10; i++){ //instead of 10, you could do number of donuts per click (maxing out at a certain point, like 50)
+        part = new BurstParticle();
+        part.x = e.pageX;
+        part.y = e.pageY;
+        particleArray.push(part);
+    }
+}
+document.addEventListener('mousedown', mouseBurst)
+init();
+animate();
