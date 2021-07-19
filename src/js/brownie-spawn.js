@@ -130,5 +130,6 @@ function mouseBurst(e){ // e is the location of the mouse event
     }
 }
 document.addEventListener('mousedown', mouseBurst)
+// document.addEventListener('dblclick', mouseBurst)
 init();
 animate();
