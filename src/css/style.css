@@ -348,8 +348,27 @@ img {
     color: white;
 }
 
+/* Purchase Auto Clicker Button */
+
+/* Purchase Brownie Multiplier Button */
+
+.purchase-brownie-multiplier-button:hover,
+.purchase-brownie-multiplier-button:focus {
+    animation: pulse 1s;
+    box-shadow: 0 0 0 2em rgba(#fff, 0);
+}
+
+@keyframes purchase-brownie-multiplier-button {
+    0% {
+        box-shadow: 0 0 0 0 var(--hover);
+    }
+}
+
+/* RESET Button */
+
 .reset-button {
-    background-color: white;
+    background-color: #d58936;
+    /* background-color: white; */
     color: black;
     border: 2px solid #f44336;
     cursor: pointer;
