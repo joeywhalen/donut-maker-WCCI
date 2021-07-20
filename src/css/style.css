@@ -280,6 +280,30 @@ img {
 /* BUTTONS */
 /* -------------------------------------- */
 
+/* Meet The Dude! Button */
+
+.dude-button {
+    background-color: white;
+    color: black;
+    border: 2px solid #555555;
+    cursor: pointer;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+}
+
+.dude-button:hover {
+    transition: all .5s;
+    transform: rotate(-3deg) scale(1.1);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, .4);
+    background-color: #555555;
+    color: white;
+}
+
 /* Brownie Click Me! Button */
 
 .bouncy {
@@ -324,33 +348,10 @@ img {
     }
 }
 
-/* Meet The Dude! Button */
-
-.dude-button {
-    background-color: white;
-    color: black;
-    border: 2px solid #555555;
-    cursor: pointer;
-    padding: 16px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    transition-duration: 0.4s;
-}
-
-.dude-button:hover {
-    transition: all .5s;
-    transform: rotate(-3deg) scale(1.1);
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, .4);
-    background-color: #555555;
-    color: white;
-}
-
 /* Purchase Auto Clicker Button */
 
 .purchase-auto-clicker-button {
+    background-color: #d58936;
     /* background-color: white; */
     color: black;
     border: 2px solid #555555;
@@ -362,11 +363,15 @@ img {
     font-size: 16px;
     margin: 4px 2px;
 }
+.purchase-auto-clicker-button:disabled,
+.purchase-auto-clicker-button[disabled] {
+    background-color:#f44336;
+}
 
 /* Purchase Brownie Multiplier Button */
 
 .purchase-brownie-multiplier-button {
-    /* background-color: #d58936; */
+    background-color: #d58936;
     color: black;
     border: 2px solid #555555;
     cursor: pointer;
@@ -378,10 +383,15 @@ img {
     margin: 4px 2px;
 }
 
-.purchase-brownie-multiplier-button:active {
+.purchase-brownie-multiplier-button:disabled,
+.purchase-brownie-multiplier-button[disabled] {
+    background-color:#f44336;
+}
+
+/* .purchase-brownie-multiplier-button:active {
     background-color:#d58936;
     color: #d58936;
-}
+} */
 
 /* RESET Button */
 
