@@ -365,7 +365,8 @@ img {
 }
 .purchase-auto-clicker-button:disabled,
 .purchase-auto-clicker-button[disabled] {
-    background-color:#f44336;
+    background-color: #d58936;
+    opacity: 0.5;
 }
 
 /* Purchase Brownie Multiplier Button */
@@ -385,7 +386,8 @@ img {
 
 .purchase-brownie-multiplier-button:disabled,
 .purchase-brownie-multiplier-button[disabled] {
-    background-color:#f44336;
+    background-color: #d58936;
+    opacity: 0.5;
 }
 
 /* .purchase-brownie-multiplier-button:active {
