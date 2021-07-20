@@ -350,18 +350,37 @@ img {
 
 /* Purchase Auto Clicker Button */
 
-/* Purchase Brownie Multiplier Button */
-
-.purchase-brownie-multiplier-button:hover,
-.purchase-brownie-multiplier-button:focus {
-    animation: pulse 1s;
-    box-shadow: 0 0 0 2em rgba(#fff, 0);
+.purchase-auto-clicker-button {
+    /* background-color: white; */
+    color: black;
+    border: 2px solid #555555;
+    cursor: pointer;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
 }
 
-@keyframes purchase-brownie-multiplier-button {
-    0% {
-        box-shadow: 0 0 0 0 var(--hover);
-    }
+/* Purchase Brownie Multiplier Button */
+
+.purchase-brownie-multiplier-button {
+    /* background-color: #d58936; */
+    color: black;
+    border: 2px solid #555555;
+    cursor: pointer;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+}
+
+.purchase-brownie-multiplier-button:active {
+    background-color:#d58936;
+    color: #d58936;
 }
 
 /* RESET Button */
