@@ -608,3 +608,17 @@ img {
     letter-spacing: 2px;
     cursor: pointer;
 }
+
+/* -------------------------------------- */
+/* FOOTER */
+/* -------------------------------------- */
+
+footer {
+    display:flex;
+}
+
+.footer-copy-text {
+    display:flex;
+    padding-left: 550px;
+    align-items: right;
+}
