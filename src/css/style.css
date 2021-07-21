@@ -544,3 +544,38 @@ img {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
+
+/* Hell Spawn Button */
+.btn-danger-hell {
+    width: 130px;
+    height: 50px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid white;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+    font-size: 20px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.btn-danger-hell::before {
+    content: '';
+    position: absolute;
+    top: -70px;
+    background: url("fire.gif");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 130px;
+    height: 150px;
+    z-index: -1;
+    opacity: 0;
+    transition: all 1s;
+}
+
+.btn-danger-hell:hover::before {
+    opacity: 1;
+}
