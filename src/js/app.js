@@ -84,4 +84,5 @@ purchaseBrownieMultiplierButton.addEventListener("click", () => {
 // brownieReset.addEventListener("click", () => {
 //     // newBrownie.playResetAudio();
 //     newBrownie.brownieMakerReset();
+// Project is complete.
 // });
