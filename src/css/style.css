@@ -3,15 +3,8 @@
 /* -------------------------------------- */
 
 body {
-    /* background-color: khaki; */
-    /* background-color: #2f4353;
-    background-image: linear-gradient(315deg, #2f4353 0%, #d2ccc4 74%); */
-    /* background-color: #a38560;
-    background-image: linear-gradient(315deg, #a38560 0%, #e0d4ae 74%); */
     background-color: #69140e;
     background-image: linear-gradient(315deg, #69140e 0%, #d58936 74%);
-    /* background-color: #230903;
-    background-image: linear-gradient(315deg, #230903 0%, #d3b88c 74%); */
     height: auto;
     margin: 5px;
     padding: 20px;
@@ -62,41 +55,7 @@ img {
     text-decoration: none;
 }
 
-/* #nav-link {
-    font-weight: bold;
-    text-decoration: none;
-    text-align: center;
-    padding: 10px 20px;
-    border-radius: 5px;
-} */
-
-/* #nav-link:visited,
-#nav-link:link {
-    background-color: #69140e;
-    background-color: #d58936;
-    color: black;
-    color: white;
-    border: 2px solid white;
-} */
-
-/* #nav-link:active {
-    background-color: white;
-    color: #69140e;
-    border: 2px solid #69140e;
-    border-radius: 5px;
-    box-shadow: 2px 2px 3px rgba(31, 27, 27, 0.25);
-} */
-
-/* .header-nav-inspire-link {
-    color: black;
-} */
-
 .headernavpopup {
-    /* font-weight: bold;
-    text-decoration: none;
-    text-align: center;
-    padding: 10px 20px;
-    border-radius: 5px; */
     position: relative;
     display: inline-block;
     cursor: pointer;
@@ -105,23 +64,6 @@ img {
     -ms-user-select: none;
     user-select: none;
 }
-
-/* .headernavpopup:visited,
-.headernavpopup:link {
-    background-color: #69140e;
-    background-color: #d58936;
-    color: black;
-    color: white;
-    border: 2px solid white;
-}
-
-.headernavpopup:active {
-    background-color: white;
-    color: #69140e;
-    border: 2px solid #69140e;
-    border-radius: 5px;
-    box-shadow: 2px 2px 3px rgba(31, 27, 27, 0.25);
-} */
 
 .headernavpopup .infopopup-text {
     visibility: hidden;
@@ -203,10 +145,7 @@ img {
 
 /* Modal Content */
 .modal-content {
-    /* display: flex;
-    flex-direction: column; */
     background-color: #d58936;
-    /* background-color: #fefefe; */
     margin: auto;
     padding: 20px;
     border: 1px solid #888;
@@ -228,19 +167,10 @@ img {
     cursor: pointer;
 }
 
-/* .modal-links {
-    display: flex;
-} */
-
 .modal-links a {
     display: flex;
     color: #000;
 }
-
-/* #modal-nav-links:active {
-    display: flex;
-    color: #000;
-} */
 
 /* -------------------------------------- */
 /* MAIN CONTENT */
@@ -354,9 +284,8 @@ img {
 /* Purchase Auto Clicker Button */
 
 .purchase-auto-clicker-button {
-    font-family:Lato;
+    font-family: Lato;
     background-color: #d58936;
-    /* background-color: white; */
     color: black;
     border: 2px solid #555555;
     cursor: pointer;
@@ -367,6 +296,7 @@ img {
     font-size: 16px;
     margin: 4px 2px;
 }
+
 .purchase-auto-clicker-button:disabled,
 .purchase-auto-clicker-button[disabled] {
     background-color: #d58936;
@@ -395,16 +325,10 @@ img {
     opacity: 0.5;
 }
 
-/* .purchase-brownie-multiplier-button:active {
-    background-color:#d58936;
-    color: #d58936;
-} */
-
 /* RESET Button */
 
 .reset-button {
     background-color: #d58936;
-    /* background-color: white; */
     color: black;
     font-family: Lato;
     border: 2px solid #f44336;
@@ -433,21 +357,21 @@ img {
 
 .reset-button:before,
 .reset-button:after {
-     content: '';
-     position: absolute;
-     top: 0.67em;
-     left: 0;
-     width: 100%;
-     text-align: center;
-     opacity: 0;
-     -webkit-transition: .4s,
-     opacity .6s;
-     -moz-transition: .4s,
-     opacity .6s;
-     -o-transition: .4s,
-     opacity .6s;
-     transition: .4s,
-     opacity .6s;
+    content: '';
+    position: absolute;
+    top: 0.67em;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    opacity: 0;
+    -webkit-transition: .4s,
+        opacity .6s;
+    -moz-transition: .4s,
+        opacity .6s;
+    -o-transition: .4s,
+        opacity .6s;
+    transition: .4s,
+        opacity .6s;
 }
 
 .reset-button:before {
@@ -517,7 +441,6 @@ img {
     position: absolute;
     top: 0px;
     left: 0px;
-    /* z-index: 3; */
     z-index: -1;
 }
 
@@ -548,7 +471,6 @@ img {
 .brownie-spawn {
     position: absolute;
     display: grid;
-    /* display: flex; */
     grid-template-columns: 1fr 1fr 1fr;
 }
 
@@ -591,12 +513,13 @@ img {
 
 /* Spawn & Rain Buttons */
 
-.btn-danger-spawn, .btn-danger-rain {
+.btn-danger-spawn,
+.btn-danger-rain {
     width: 130px;
     height: 50px;
     font-family: Lato;
     color: black;
-    background-color:#d58936;
+    background-color: #d58936;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -614,11 +537,11 @@ img {
 /* -------------------------------------- */
 
 footer {
-    display:flex;
+    display: flex;
 }
 
 .footer-copy-text {
-    display:flex;
+    display: flex;
     padding-left: 550px;
     align-items: right;
 }

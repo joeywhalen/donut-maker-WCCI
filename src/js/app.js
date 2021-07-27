@@ -1,4 +1,3 @@
-// import {BrownieMaker} from "./brownie-maker.js";
 
 const newBrownie = new BrownieMaker();
 
@@ -80,9 +79,3 @@ purchaseBrownieMultiplierButton.addEventListener("click", () => {
     brownieClickValue.innerHTML = newBrownie.browniesPerClick;
     brownieCount.innerHTML = newBrownie.clickCount;
 });
-
-// brownieReset.addEventListener("click", () => {
-//     // newBrownie.playResetAudio();
-//     newBrownie.brownieMakerReset();
-// Project is complete.
-// });
