@@ -1,0 +1,31 @@
+{
+  "name": "donut-maker-joeywhalen",
+  "version": "1.0.0",
+  "description": "WCCI solo project mirrors basic functionality of Cookie Clicker",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "check-node-version": "^4.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "testbrownie"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joeywhalen/donut-maker-WCCI.git"
+  },
+  "keywords": [
+    "WCCI",
+    "donut",
+    "maker"
+  ],
+  "author": "JawProductions",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/joeywhalen/donut-maker-WCCI/issues"
+  },
+  "homepage": "https://github.com/joeywhalen/donut-maker-WCCI#readme"
+}
