@@ -497,7 +497,9 @@ img {
     content: '';
     position: absolute;
     top: -70px;
-    background: url("fire.gif");
+    background: url("https://cdn.imgbin.com/17/8/14/imgbin-dark-souls-iii-pyromancy-fire-fireball-wcz4fZ7hAwQ6U1bQ7qs6VgM05.jpg");
+    /* background: url("src/resources/img/brownie-fireball.jpeg"); */
+    /* background: url("fire.gif"); */
     background-repeat: no-repeat;
     background-size: cover;
     width: 130px;
