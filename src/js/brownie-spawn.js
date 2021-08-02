@@ -62,7 +62,8 @@ class BurstParticle{
         this.opacity -= .01;
         this.opacity = Math.max(0, this.opacity);
         context.globalCompositeOperation = "destination-over";
-        context.drawImage(altBrownie, this.x, this.y, 20, 20)
+        context.drawImage(brownie, this.x, this.y, 20, 20)
+        // context.drawImage(altBrownie, this.x, this.y, 20, 20)
     }
     update(i){
         this.y -= this.yMomentum;
