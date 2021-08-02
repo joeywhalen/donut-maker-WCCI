@@ -4,9 +4,10 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 let brownie = new Image();
-brownie.src = '/src/resources/img/Chocolate-Fudge-Brownie.png';
+brownie.src = "/src/resources/img/Chocolate-Fudge-Brownie.png";
+// brownie.src = '/src/resources/img/Chocolate-Fudge-Brownie.png';
 let altBrownie = new Image();
-altBrownie.src = '/src/resources/img/Brownie_transparent.png';
+altBrownie.src = "/src/resources/img/Brownie_transparent.png";
 
 let particleArray = []; // square brackets mean we have an array
 const maxSize = 200;
